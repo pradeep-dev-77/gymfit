@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Gym — Train Like It Matters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">NG</span>
+      <span class="brand-word">NATIONAL <em>GYM</em></span>
+    </a>
+
+    <nav class="nav" id="mainNav">
+      <a href="#gallery">Gallery</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#apply">Personal Training</a>
+      <a href="#hours">Hours</a>
+      <a href="#rules">Rules</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#apply" class="btn btn-primary">Apply Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-kicker">Est. 2010 &nbsp;·&nbsp; State-certified facility</p>
+        <h1>TRAIN LIKE<br>IT MATTERS.</h1>
+        <p class="hero-sub">Free weights, conditioning, and personal coaching under one roof — built for people who show up on the days they don't feel like it.</p>
+        <div class="hero-cta">
+          <a href="#apply" class="btn btn-primary">Apply for a Personal Trainer</a>
+          <a href="#gallery" class="btn btn-ghost">See the Gym</a>
+        </div>
+      </div>
+
+      <div class="hero-photo photo-slot" data-label="Add hero photo — wide shot of gym floor, 1400×1600px">
+        <img src="https://unsplash.com/photos/rbSNsoXk-3A/download?w=1400" alt="National Gym training floor" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');">
+      </div>
+    </div>
+
+    <div class="stat-bar">
+      <div class="stat"><span class="stat-num">1,200+</span><span class="stat-label">Active members</span></div>
+      <div class="stat"><span class="stat-num">9</span><span class="stat-label">Certified trainers</span></div>
+      <div class="stat"><span class="stat-num">14,000</span><span class="stat-label">Sq. ft. of floor space</span></div>
+      <div class="stat"><span class="stat-num">05:00–23:00</span><span class="stat-label">Open daily</span></div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <h2>Inside the Gym</h2>
+      <p class="section-lede">A look at the floor, the equipment, and the people training on it. Swap every image below with your own — see the code comments for exact spots.</p>
+
+      <div class="gallery-grid">
+        <!-- GYM PHOTO 1 -->
+        <div class="gallery-item photo-slot span-2" data-label="Add photo — main weights floor">
+          <img src="https://unsplash.com/photos/w7jYaN7GqyA/download?w=1400" alt="Free weights area" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');" onclick="openLightbox(this)">
+        </div>
+        <!-- GYM PHOTO 2 -->
+        <div class="gallery-item photo-slot" data-label="Add photo — cardio zone">
+          <img src="https://unsplash.com/photos/h9t94gzm6q8/download?w=900" alt="Cardio zone" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');" onclick="openLightbox(this)">
+        </div>
+        <!-- GYM PHOTO 3 -->
+        <div class="gallery-item photo-slot" data-label="Add photo — squat rack / platforms">
+          <img src="https://unsplash.com/photos/AzX5iNFYBMY/download?w=900" alt="Squat racks and lifting platforms" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');" onclick="openLightbox(this)">
+        </div>
+        <!-- GYM PHOTO 4 -->
+        <div class="gallery-item photo-slot span-2" data-label="Add photo — group class / studio">
+          <img src="https://unsplash.com/photos/jlf9QyI250Y/download?w=1400" alt="Dumbbells on the training floor" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');" onclick="openLightbox(this)">
+        </div>
+        <!-- GYM PHOTO 5 -->
+        <div class="gallery-item photo-slot span-2" data-label="Add photo — locker room / entrance">
+          <img src="https://unsplash.com/photos/2e4lbLTqPIo/download?w=1400" alt="Strength and conditioning equipment" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');" onclick="openLightbox(this)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRAINERS ============ -->
+  <section class="trainers" id="trainers">
+    <div class="section-inner">
+      <h2>Meet Your Trainers</h2>
+      <p class="section-lede">Every trainer here is nationally certified and specializes in a different corner of fitness. Pick one below when you apply.</p>
+
+      <div class="trainer-grid" id="trainerGrid">
+
+        <!-- TRAINER 1 -->
+        <article class="trainer-card">
+          <div class="trainer-photo photo-slot" data-label="Add trainer photo">
+            <img src="kishore.webp" alt="Photo of trainer Kishore" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');">
+          </div>
+          <h3>Kishore</h3>
+          <p class="trainer-role">Calisthenics</p>
+          <p class="trainer-badge">NSCA Certified</p>
+          <button class="btn btn-outline" onclick="applyWithTrainer('Kishore')">Apply to Train with Kishore</button>
+        </article>
+
+        <!-- TRAINER 2 -->
+        <article class="trainer-card">
+          <div class="trainer-photo photo-slot" data-label="Add trainer photo">
+            <img src="deepak.webp" alt="Photo of trainer Deepak" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');">
+          </div>
+          <h3>Deepak</h3>
+          <p class="trainer-role">Strength Training</p>
+          <p class="trainer-badge">ACE Certified</p>
+          <button class="btn btn-outline" onclick="applyWithTrainer('Deepak')">Apply to Train with Deepak</button>
+        </article>
+
+        <!-- TRAINER 3 -->
+        <article class="trainer-card">
+          <div class="trainer-photo photo-slot" data-label="Add trainer photo">
+            <img src="jisthenics.jpg" alt="Photo of trainer jisthenics" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');">
+          </div>
+          <h3>jisthenics</h3>
+          <p class="trainer-role">Sports Performance</p>
+          <p class="trainer-badge">NASM Certified</p>
+          <button class="btn btn-outline" onclick="applyWithTrainer('jisthenics')">Apply to Train with jisthenics</button>
+        </article>
+
+        <!-- TRAINER 4 -->
+        <article class="trainer-card">
+          <div class="trainer-photo photo-slot" data-label="Add trainer photo">
+            <img src="loki.png" alt="Photo of trainer loki" onerror="this.style.display='none'; this.parentElement.classList.add('photo-slot--empty');">
+          </div>
+          <h3>Loki</h3>
+          <p class="trainer-role">Mobility &amp; Rehab</p>
+          <p class="trainer-badge">ACSM Certified</p>
+          <button class="btn btn-outline" onclick="applyWithTrainer('Loki')">Apply to Train with Loki</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APPLY FOR PERSONAL TRAINER ============ -->
+  <section class="apply" id="apply">
+    <div class="section-inner section-inner--narrow">
+      <h2>Apply for a Personal Trainer</h2>
+      <p class="section-lede">Tell us where you're starting from and what trainer fits you. Someone from the front desk will call within one business day to set up your first session.</p>
+
+      <form id="applyForm" class="apply-form" novalidate>
+        <div class="form-row">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" required placeholder="Your name">
+        </div>
+
+        <div class="form-row form-row--half">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="10-digit number">
+          </div>
+        </div>
+
+        <div class="form-row form-row--half">
+          <div>
+            <label for="trainer">Preferred trainer</label>
+            <select id="trainer" name="trainer" required>
+              <option value="" disabled selected>Choose a trainer</option>
+              <option value="Kishore">Kishore — Calisthenics</option>
+              <option value="Deepak">Deepak — Strength Training</option>
+              <option value="Vikram Singh">Vikram Singh — Sports Performance</option>
+              <option value="Priya Das">Priya Das — Mobility &amp; Rehab</option>
+              <option value="No preference">No preference</option>
+            </select>
+          </div>
+          <div>
+            <label for="goal">Primary goal</label>
+            <select id="goal" name="goal" required>
+              <option value="" disabled selected>Choose a goal</option>
+              <option value="Lose weight">Lose weight</option>
+              <option value="Build muscle">Build muscle</option>
+              <option value="Improve strength">Improve strength</option>
+              <option value="Sport-specific training">Sport-specific training</option>
+              <option value="Injury recovery">Injury recovery</option>
+              <option value="General fitness">General fitness</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="preferredTime">Preferred training time</label>
+          <input type="text" id="preferredTime" name="preferredTime" placeholder="e.g. weekday mornings, 6–8 PM">
+        </div>
+
+        <div class="form-row">
+          <label for="message">Anything we should know? (injuries, experience level, schedule constraints)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ WORKING HOURS ============ -->
+  <section class="hours" id="hours">
+    <div class="section-inner section-inner--narrow">
+      <h2>Working Hours</h2>
+      <table class="hours-table">
+        <tbody>
+          <tr><th>Monday – Friday</th><td>05:00 AM – 11:00 PM</td></tr>
+          <tr><th>Saturday</th><td>06:00 AM – 10:00 PM</td></tr>
+          <tr><th>Sunday</th><td>07:00 AM – 08:00 PM</td></tr>
+          <tr><th>Public holidays</th><td>08:00 AM – 02:00 PM</td></tr>
+        </tbody>
+      </table>
+      <p class="hours-note">Personal training sessions can be booked up to 30 minutes before close. Front desk closes 15 minutes before the gym.</p>
+    </div>
+  </section>
+
+  <!-- ============ RULES ============ -->
+  <section class="rules" id="rules">
+    <div class="section-inner section-inner--narrow">
+      <h2>Gym Rules</h2>
+      <ol class="rules-list">
+        <li>Carry your membership card or ID for every visit — front desk cannot admit you without it.</li>
+        <li>Re-rack weights and wipe down equipment after use.</li>
+        <li>Closed-toe athletic shoes required on the training floor at all times.</li>
+        <li>Book squat racks and platforms for a maximum of 45 minutes during peak hours (5–8 AM, 6–9 PM).</li>
+        <li>No dropping loaded barbells; controlled lowering only.</li>
+        <li>Personal training sessions must be scheduled at least 12 hours in advance through the front desk or your trainer.</li>
+        <li>Guests may enter with a member for a one-time trial visit only.</li>
+        <li>Phones on silent; keep calls to the lounge area, not the training floor.</li>
+        <li>Members under 16 must be accompanied by a guardian at all times.</li>
+        <li>Management reserves the right to suspend membership for repeated rule violations.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">NG</span>
+        <span class="brand-word">NATIONAL <em>GYM</em></span>
+        <p>123 Anna Salai, Chennai, Tamil Nadu 600002</p>
+        <p>+91 98765 43210 &nbsp;·&nbsp; hello@nationalgym.example</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#apply">Personal Training</a>
+        <a href="#hours">Hours</a>
+        <a href="#rules">Rules</a>
+      </div>
+    </div>
+    <p class="footer-bottom">© <span id="year"></span> National Gym. All rights reserved.</p>
+  </footer>
+
+</main>
+
+<!-- ============ LIGHTBOX (for gallery) ============ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
